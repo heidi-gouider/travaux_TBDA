@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Hello</title>
+</head>
+<body>
+    <h1>recette du gateau à la carotte</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+    <br>Dicta distinctio adipisci aut inventore amet magni vero ipsam maxime impedit,
+    <br>et asperiores nesciunt nostrum nobis doloremque, a optio neque placeat autem!</p>
+  <p><b>les ingrédients</b></p> 
+  <ul>
+    <li>carottes</li>
+    <li>beurre</li>
+    <li>sucre</li>
+  </ul>
+  <img class="picture"
+       src="Images/dossier.png"/>
+  <p>le process </p>
+
+  </body>
+</html>
