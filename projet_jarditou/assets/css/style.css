@@ -1,4 +1,4 @@
- html, body{
+html, body{
     width: 100%;
     height: 100%;
     margin: 0; padding: 0;
@@ -8,30 +8,52 @@ header img{
     /* position: absolute; */
 } 
 
-
+/* le menu et la fin de page sont présents et identiques sur toutes les pages */
 nav, footer{
     background-color: black;
     height: 40px;
 }
 
-ul{
+nav ul, footer ul{
     list-style: none;
-    display: flex;
-    float: left;
+    /* display: flex; */
+    /* float: left; */
+    /* display: inline-block; */
+    /* text-align: center; */
+}
+
+li{
+    display: inline-block;
     text-align: center;
 }
 
+li a{
+    color: white;
+    
+}
+
+/* image promo */
 
 
 #promo{
-    box-sizing: border-box;
+    position: relative;
+    width: 100%;
 }
+
+
+
+/*page d'acceuil */
+
 section{
     display: flex;
 }
 
 .container{
     display: inline-block;
+}
+
+#text{
+    border-top: 1px solid;
 }
 
 #colonne{
