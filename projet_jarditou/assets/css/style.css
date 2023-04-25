@@ -4,13 +4,13 @@ html, body{
     margin: 0; padding: 0;
     font-size: 100%;
 } 
-
-/***************** Le menu ****************************/
+/****************** Le header *********************/
 
 /* Je vais utiliser la propriété display pour modifier l'emplacement des éléments */
 .logo{
+    width: 100%;
     display: inline-flex;
-    /* justify-content: space-between; */
+    /* position: relative; */
 }
 #img{
     width: 25%;
@@ -18,22 +18,30 @@ html, body{
 }
 
 #text-logo{
+    margin-left: 30%;
+    /* float: right; */
+    text-align: left;
+    /* align-content: center; */
+    /* position: relative; */
     font-size: 1rem;
+    
 }
 
-/* le menu et la fin de page sont présents et identiques sur toutes les pages */
-nav, footer{
-    background-color: black;
-    height: 40px;
-}
+/*********** Le menu **********/
 
-nav ul, footer ul{
+nav{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
     list-style: none;
-    /* display: flex; */
-    /* float: left; */
-    /* display: inline-block; */
+    background-color: black;
+    margin-bottom: 10px;
 }
 
+nav a:hover{
+    color: rgb(25, 153, 212);
+}
 
 /* le inline-block permet d'espacer les boîtes*/
 li{
@@ -48,29 +56,48 @@ li a{
     
 }
 
-/* image promo */
+/* menu burger pour mobile */
+/* .menu-burger{
+    color: white;
+    
+}
+
+.menu-burger a :hover{
+    color: rgb(25, 153, 212);
+} */
+
+/****** image promo **********/
 
 
 #promo{
     width: 100%;
     height: auto;
-    padding-top: 10px;
 }
 
-
-
-/***********************page d'acceuil *************************/
-
-
-/* Ici je vais rendre flexible les éléments contenu dans la balise section
-pour pouvoir les placer comme demandé */
-section{
+/******** Le footer *************/
+footer{
+    width: 100%;
+    height: auto;
+    background-color: black;
+    position: relative;
+    list-style: none;
+    /* je choisi le type de position absolue pour que le pied de page reste à sa place  */
     display: flex;
-}
-
-.container{
     margin-top: 10px;
 }
+
+/******CONTENU PAGE ACCUEIL ********/
+
+/* Ici je vais rendre flexible les éléments contenu dans la balise section
+avec le modèle de grilles pour pouvoir les placer comme demandé */
+section{
+    display: flex;
+    margin-top: 10px;
+}
+
+/* .container{
+    margin-top: 10px;
+} */
 
 #para{
     border-top: 1px solid;
@@ -81,19 +108,22 @@ section{
 }
 
 #colonne{
-    width: 60%;
+    width: 50%;
     background-color: grey;
 }
 
 
-/*************************** page tableau************************* */
+/*****************CONTENU PAGE TABLEAU******************* */
 
 table{
     display: inline-block;
+    width: 100%;
     
 }
 caption{
-    /* display: none; */
+    position: relative;
+    
+
 }
 thead, tbody{
     /* display: inline-block; */
@@ -107,22 +137,25 @@ thead, tbody{
 
 
                     /* responsive */
+    /* Je vais utiliser la valeur screen qui correspond aux écrans */
     /*pour tous les écrans de taille inférieur à 768px*/
 
 @media screen and (max-width: 768px){
-    nav ul{
-        display: noneS;
-    }    
     #colonne{
         display: none;
-   
+    }
+    /* label{
+        display: none;
+    } */
 }
 
-@media  and (max-width: 576px) {
-    nav{}
+@media screen and (max-width: 576px) {
+    nav ul{
+        
+    }
 }
 
 
-}
+
 
 

@@ -14,27 +14,35 @@ promo. Pour ça je crée une div et une class que j'appellerais "menu".
 Celle-ci regroupera tous les éléments que je souhaiterais inclure dans les autres pages -->
 
   <header>
-    <img class="logo" id="img" src="assets/img/logo.jpg" alt="logo" title="logo">
-    <h1 class="logo" id="text-logo">La qualité depuis 70 ans</h1>
+    <div class="logo">
+      <img id="img" src="assets/img/logo.jpg" alt="logo" title="logo">
+      <h1 id="text-logo">Tout le jardin</h1>
+    </div>
   <!-- </header> -->
 
   <!-- <div class="menu"> -->
-    <nav id="menu">
+    <nav>
       <ul>
         <li><a href="index.html">Accueil</a></li>
         <li><a href="tableau.html">Tableau</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+
+      <!-- Je rajoute l'élément label avec l'attribut for pour créer un menu adapté pour mobile -->
+      <!-- <label for="mobile" class="menu-burger">Menu</label> -->
+
     </nav>
     <img id="promo" src="assets/img/promotion.jpg" alt="promo" title="promo">
       <!-- </div> -->
+    
   </header>
 
 <!-- Pour le contenu de la page, je crée des blocks fixes(balises)
 Celles-ci me permettront en les sélectionnant dans mon css de les rendre flexibles
-pour les positionner -->
+pour les positionner. Je me pose la question de la surcharge de balises
+je vais donc sûrement modifier au fur et à mesure vers plus de simplicité-->
   <section>
-    <div class="container" id="text">
+    <article class="container" id="text">
       <h1>Accueil</h1>
       <div class="container" id="para">
         <h3>L'entreprise</h3>
@@ -48,7 +56,7 @@ pour les positionner -->
         <h3>Devis gratuit</h3>
         <p>Vous pouvez bien sûr contacter pour de plus amples informations ou pour une demande d’intervention. Vous souhaitez un devis ? Nous vous le réalisons gratuitement.</p>
         </div>
-    </div>
+      </article>
     <div class="container" id="colonne">[Colonne droite]</div>
   </section>
     
