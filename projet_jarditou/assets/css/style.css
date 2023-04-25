@@ -4,10 +4,22 @@ html, body{
     margin: 0; padding: 0;
     font-size: 100%;
 } 
-header img{
+
+/***************** Le menu ****************************/
+
+/* Je vais utiliser la propriété display pour modifier l'emplacement des éléments */
+.logo{
+    display: inline-flex;
+    /* justify-content: space-between; */
+}
+#img{
     width: 25%;
     /* position: absolute; */
-} 
+}
+
+#text-logo{
+    font-size: 1rem;
+}
 
 /* le menu et la fin de page sont présents et identiques sur toutes les pages */
 nav, footer{
@@ -20,18 +32,19 @@ nav ul, footer ul{
     /* display: flex; */
     /* float: left; */
     /* display: inline-block; */
-    /* text-align: center; */
 }
 
 
-/* le inline-block permet d'espacer les */
+/* le inline-block permet d'espacer les boîtes*/
 li{
     display: inline-block;
+    /* align-items: center; */
     
 }
 
 li a{
     color: white;
+    padding-top: 10px;
     
 }
 
@@ -39,41 +52,77 @@ li a{
 
 
 #promo{
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    padding-top: 10px;
 }
 
 
 
-/*page d'acceuil */
+/***********************page d'acceuil *************************/
 
+
+/* Ici je vais rendre flexible les éléments contenu dans la balise section
+pour pouvoir les placer comme demandé */
 section{
     display: flex;
 }
 
 .container{
-    display: inline-block;
+    margin-top: 10px;
 }
 
-#text{
+#para{
     border-top: 1px solid;
+}
+#text p{
+    font-size: 1rem;
+    /* margin-right: 10px; */
 }
 
 #colonne{
+    width: 60%;
     background-color: grey;
 }
+
+
+/*************************** page tableau************************* */
+
+table{
+    display: inline-block;
+    
+}
+caption{
+    /* display: none; */
+}
+thead, tbody{
+    /* display: inline-block; */
+}
+
+.img{
+    width: 50%;
+    height: auto;
+}
+
+
 
                     /* responsive */
     /*pour tous les écrans de taille inférieur à 768px*/
 
 @media screen and (max-width: 768px){
-    nav{
-
+    nav ul{
+        display: noneS;
     }    
-
     #colonne{
         display: none;
-    }
+   
+}
+
+@media  and (max-width: 576px) {
+    nav{}
+}
+
+
 }
 
 
