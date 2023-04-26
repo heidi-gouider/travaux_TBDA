@@ -1,29 +1,39 @@
-html, body{
+html{
     width: 100%;
-    height: 100%;
-    margin: 0; padding: 0;
+    height: auto;
+    /* margin: 0; padding: 0; */
     font-size: 100%;
+    font-family: 'Lucida Sans Regular';
 } 
 /****************** Le header *********************/
 
 /* Je vais utiliser la propriété display pour modifier l'emplacement des éléments */
 .logo{
     width: 100%;
-    display: inline-flex;
+    height: auto;
+    /* display: inline-flex; */
+    display: flex;
     /* position: relative; */
 }
 #img{
     width: 25%;
-    /* position: absolute; */
+    height: auto;
+    position: relative;
+    /* flex: initial; */
 }
 
 #text-logo{
+    /* flex: none; */
+    /* width: 100%;
+    height: auto; */
     margin-left: 30%;
-    /* float: right; */
     text-align: left;
     /* align-content: center; */
     /* position: relative; */
-    font-size: 1rem;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 100;
+    padding-top: 3%;
     
 }
 
@@ -34,26 +44,29 @@ nav{
     height: auto;
     position: relative;
     display: flex;
-    list-style: none;
     background-color: black;
     margin-bottom: 10px;
-}
-
-nav a:hover{
-    color: rgb(25, 153, 212);
 }
 
 /* le inline-block permet d'espacer les boîtes*/
 li{
     display: inline-block;
+    list-style: none;
+
     /* align-items: center; */
-    
 }
 
-li a{
+/* Les liens du menu et du pied de page auront la même apparence */
+a{
+    /* text-decoration: none; */
+    width: auto;
     color: white;
     padding-top: 10px;
     
+}
+
+a:hover{
+    color: rgb(25, 153, 212);
 }
 
 /* menu burger pour mobile */
@@ -81,9 +94,12 @@ footer{
     background-color: black;
     position: relative;
     list-style: none;
-    /* je choisi le type de position absolue pour que le pied de page reste à sa place  */
     display: flex;
-    margin-top: 10px;
+    margin-top: 0.6rem;
+}
+
+footer a{
+
 }
 
 /******CONTENU PAGE ACCUEIL ********/
@@ -92,7 +108,14 @@ footer{
 avec le modèle de grilles pour pouvoir les placer comme demandé */
 section{
     display: flex;
-    margin-top: 10px;
+    margin-top: 0.6rem;
+}
+article{
+    /* font-family: 'Lucida Sans Regular'; */
+    font-size: 1rem;
+}
+article h1{
+    font-size: 1.8rem;
 }
 
 /* .container{
@@ -100,11 +123,7 @@ section{
 } */
 
 #para{
-    border-top: 1px solid;
-}
-#text p{
-    font-size: 1rem;
-    /* margin-right: 10px; */
+    border-top: 0.06rem solid;
 }
 
 #colonne{
@@ -118,23 +137,30 @@ section{
 table{
     display: inline-block;
     width: 100%;
+    border-top: 0.06rem solid;
     
 }
-caption{
-    position: relative;
-    
 
-}
 thead, tbody{
     /* display: inline-block; */
 }
 
+.text-tableau{
+    font-size: 10rem;
+    color: blue;
+}
+
 .img{
-    width: 50%;
+    width: 25%;
     height: auto;
 }
 
+/************* Formulaire********** */
 
+.formulaire{
+    /* j'utilise une valeur de type inside pour organiser le contenu du formulaire */
+    display: table;
+}
 
                     /* responsive */
     /* Je vais utiliser la valeur screen qui correspond aux écrans */
@@ -147,11 +173,13 @@ thead, tbody{
     /* label{
         display: none;
     } */
+
 }
 
 @media screen and (max-width: 576px) {
-    nav ul{
-        
+    nav li{
+        display: flex;
+        flex-flow: column wrap;
     }
 }
 
