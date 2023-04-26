@@ -1,47 +1,48 @@
-html{
+html,body{
     width: 100%;
     height: auto;
-    /* margin: 0; padding: 0; */
+    margin: 0; padding: 0;
     font-size: 100%;
     font-family: 'Lucida Sans Regular';
 } 
+
 /****************** Le header *********************/
 
 /* Je vais utiliser la propriété display pour modifier l'emplacement des éléments */
-.logo{
+header{
     width: 100%;
     height: auto;
-    /* display: inline-flex; */
+    display: inline-block;
     display: flex;
     /* position: relative; */
 }
 #img{
     width: 25%;
     height: auto;
-    position: relative;
+    /* position: relative; */
     /* flex: initial; */
 }
 
 #text-logo{
-    /* flex: none; */
+    flex: none;
     /* width: 100%;
     height: auto; */
     margin-left: 30%;
-    text-align: left;
+    /* text-align: center; */
     /* align-content: center; */
     /* position: relative; */
     font-size: 1.8rem;
     font-style: normal;
     font-weight: 100;
-    padding-top: 3%;
+    /* padding-top: 3%; */
     
 }
 
-/*********** Le menu **********/
+        /*********** Le menu **********/
 
 nav{
-    width: 100%;
-    height: auto;
+    /* width: 100%;
+    height: auto; */
     position: relative;
     display: flex;
     background-color: black;
@@ -52,8 +53,6 @@ nav{
 li{
     display: inline-block;
     list-style: none;
-
-    /* align-items: center; */
 }
 
 /* Les liens du menu et du pied de page auront la même apparence */
@@ -69,17 +68,17 @@ a:hover{
     color: rgb(25, 153, 212);
 }
 
-/* menu burger pour mobile */
-/* .menu-burger{
+menu déroulant pour mobile
+#menu-mobile{
     color: white;
     
 }
 
-.menu-burger a :hover{
+#menu-burger :hover{
     color: rgb(25, 153, 212);
-} */
+}
 
-/****** image promo **********/
+        /****** image promo **********/
 
 
 #promo{
@@ -87,7 +86,7 @@ a:hover{
     height: auto;
 }
 
-/******** Le footer *************/
+        /******** Le footer *************/
 footer{
     width: 100%;
     height: auto;
@@ -102,13 +101,14 @@ footer a{
 
 }
 
-/******CONTENU PAGE ACCUEIL ********/
+        /****** PAGE ACCUEIL ********/
 
 /* Ici je vais rendre flexible les éléments contenu dans la balise section
 avec le modèle de grilles pour pouvoir les placer comme demandé */
 section{
     display: flex;
     margin-top: 0.6rem;
+    /* position: relative; */
 }
 article{
     /* font-family: 'Lucida Sans Regular'; */
@@ -118,56 +118,74 @@ article h1{
     font-size: 1.8rem;
 }
 
-/* .container{
-    margin-top: 10px;
-} */
-
-#para{
+.container{
     border-top: 0.06rem solid;
 }
 
-#colonne{
+aside{
     width: 50%;
     background-color: grey;
 }
 
 
-/*****************CONTENU PAGE TABLEAU******************* */
-
+        /*********** PAGE TABLEAU ********** */
 table{
-    display: inline-block;
     width: 100%;
-    border-top: 0.06rem solid;
-    
-}
-
-thead, tbody{
+    height: auto;
+    display: table;
+    position: relative;
+    /* width: ; */
     /* display: inline-block; */
+    border-top: 0.06rem solid;
+    border-spacing: 1rem;
+    justify-content: space-between;
+    padding: 3rem;
 }
 
-.text-tableau{
-    font-size: 10rem;
-    color: blue;
+caption{
+    font-size: 1.8rem;
+    text-align: left;
+    /* padding-left: 5%; */
+    font-weight: bold;
 }
 
-.img{
+thead{
+    padding-bottom: 5%;
+}
+/* tbody{
+    padding-top: 4rem;
+    
+} */
+
+td{
+    text-align: center;
+    /* font-weight: 100; */
+}
+
+td img{
+    width: 25%;
+}
+
+/* .photo{
     width: 25%;
     height: auto;
-}
+    flex: 0.1; 
+}*/
 
-/************* Formulaire********** */
+        /************* Formulaire********** */
 
 .formulaire{
     /* j'utilise une valeur de type inside pour organiser le contenu du formulaire */
     display: table;
 }
 
-                    /* responsive */
+        /*********** responsive **************/
     /* Je vais utiliser la valeur screen qui correspond aux écrans */
     /*pour tous les écrans de taille inférieur à 768px*/
 
 @media screen and (max-width: 768px){
-    #colonne{
+    
+    aside{
         display: none;
     }
     /* label{
@@ -177,13 +195,16 @@ thead, tbody{
 }
 
 @media screen and (max-width: 576px) {
+    /* nav{
+        height: 50px;
+    } */
     nav li{
         display: flex;
         flex-flow: column wrap;
+        font-size: small;
     }
+    table{
+        width: 100%;
+    } 
 }
-
-
-
-
 
