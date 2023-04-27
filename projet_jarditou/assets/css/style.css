@@ -1,13 +1,17 @@
-html,body{
-    width: 100%;
+/* Dans ce fichier, je vais définir les propriétés graphiques de mes balises.
+pour cela, j'utilise des sélecteurs, pour chaqun d'entre eux je leur donnerais des instructions*/
+
+html,body{                 /* <= sélecteur */
+    width: 100%;           /* <= suite d'instructions comprisent entre des {} */
     height: 100%;
     margin: 0; padding: 0;
+    position: relative;
     font-size: 100%;
     font-family: 'Lucida Sans Regular';
 } 
-body{
+/* body{
     position: relative;
-}
+} */
 
 /****************** Le header *********************/
 
@@ -31,13 +35,14 @@ header{
     /* width: 100%;
     height: auto; */
     margin-left: 30%;
+    align-items: first baseline;
     /* text-align: center; */
     /* align-content: center; */
     /* position: relative; */
-    font-size: 1.8rem;
-    font:caption
-    /* font-weight: 100; */
-    /* padding-top: 3%; */
+    font-size: 1.2rem;
+    /* font:caption */
+    font-weight: lighter;
+    padding-top: 5%;
     
 }
 
@@ -46,14 +51,15 @@ header{
 nav{
     /* width: 100%;
     height: auto; */
-    position: relative;
+    /* position: relative; */
     display: flex;
     background-color: black;
     margin-bottom: 10px;
+    padding: 1%;
 }
 
 /* le inline-block permet d'espacer les boîtes*/
-li{
+nav li{
     display: inline-block;
     list-style: none;
 }
@@ -93,15 +99,24 @@ menu déroulant pour mobile
 footer{
     width: 100%;
     height: auto;
+    /* display: flex; */
     background-color: black;
     position: absolute;
-    list-style: none;
-    /* display: flex; */
     /* margin-top: 0.6rem; */
+    /* bottom: 0; */
+    padding: 2%;
+
+}
+
+.liens{
+    position: relative;
+    /* display: inline-block; */
+    /* list-style: none; */
     bottom: 0;
 }
 
-footer a{
+.liens a{
+        justify-items: space-between;
 
 }
 
@@ -112,15 +127,13 @@ avec le modèle de grilles pour pouvoir les placer comme demandé */
 section{
     display: flex;
     margin-top: 0.6rem;
-    position: relative;
+    /* position: relative; */
     padding-bottom: 0.6rem;
 }
-article{
-    /* font-family: 'Lucida Sans Regular'; */
-    font-size: 1rem;
-}
+    
 article h1{
     font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 .article{
@@ -135,17 +148,17 @@ aside{
 
         /*********** PAGE TABLEAU ********** */
 
-h1{
-    border-bottom: 0.06rem solid;
-}
+
 .responsive{
     overflow-x: auto;
+    height: 100%;
     padding-bottom: 2rem;
+    position: relative;
 }
 table{
     border-collapse: separate;
     width: 80%;
-    height: auto;
+    /* height: 100%; */
     display: table;
     /* position: relative; */
     table-layout: fixed;
@@ -159,21 +172,21 @@ table{
     /* padding-bottom: ; */
 }
 
-/* caption{
-    font-size: 1.8rem;
+caption{
+    border-bottom: 0.06rem solid;
     text-align: left;
-    padding-left: 5%;
     font-weight: bold;
-} */
+    font-size: 1.8rem;
+}
 
 /* thead{
     padding-bottom: 5%;
 } */
-/* tbody{
-    border-collapse: collapse;
-    border-spacing: 0rem;
-    
-} */
+tbody, thead{
+    margin: auto;
+    /* border-collapse: collapse;
+    border-spacing: 0rem;    */
+}
 th{
 
 }
@@ -188,11 +201,34 @@ td img{
 }
 
 
-        /************* Formulaire********** */
+        /************* PAGE CONTACT ********** */
+.container{
+    width: 100%;
+    /* margin: auto; */
+    padding-bottom: 5%;
+    border-radius: 5%; 
+}
 
-.formulaire{
+#formulaire{
     /* j'utilise une valeur de type inside pour organiser le contenu du formulaire */
     display: table;
+    /* background-color: rgb(165, 156, 156); */
+}
+
+.champ{
+    margin-bottom: 2%;
+}
+
+label{
+
+}
+
+input{
+    /* border: none; */
+    border-radius: 5%;
+    cursor: pointer;
+    margin-left: 2%;
+
 }
 
         /*********** responsive **************/
@@ -221,17 +257,27 @@ td img{
 }
 
 @media screen and (max-width: 576px) {
-    
+    /* nav{
+        height: 10%;
+    } */
     nav li{
         display: flex;
         flex-flow: column wrap;
         font-size: small;
     }
-    /* table{
-        display: block;
+    table{
+        /* display: block; */
+        height: 100%;
+        /* position: relative; */
     }  */
     .responsive{
         /* margin: 3rem; */
+        /* min-height: 100%; */
+        padding-bottom: 0%;
+
+    }
+    footer{
+        /* padding: 20%; */
     }
 }
 
