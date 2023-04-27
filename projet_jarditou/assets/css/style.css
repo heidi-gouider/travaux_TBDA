@@ -1,10 +1,13 @@
 html,body{
     width: 100%;
-    height: auto;
+    height: 100%;
     margin: 0; padding: 0;
     font-size: 100%;
     font-family: 'Lucida Sans Regular';
 } 
+body{
+    position: relative;
+}
 
 /****************** Le header *********************/
 
@@ -12,9 +15,9 @@ html,body{
 header{
     width: 100%;
     height: auto;
-    display: inline-block;
+    /* display: inline-block; */
     display: flex;
-    /* position: relative; */
+    position: relative;
 }
 #img{
     width: 25%;
@@ -24,7 +27,7 @@ header{
 }
 
 #text-logo{
-    flex: none;
+    /* flex: none; */
     /* width: 100%;
     height: auto; */
     margin-left: 30%;
@@ -32,8 +35,8 @@ header{
     /* align-content: center; */
     /* position: relative; */
     font-size: 1.8rem;
-    font-style: normal;
-    font-weight: 100;
+    font:caption
+    /* font-weight: 100; */
     /* padding-top: 3%; */
     
 }
@@ -91,10 +94,11 @@ footer{
     width: 100%;
     height: auto;
     background-color: black;
-    position: relative;
+    position: absolute;
     list-style: none;
-    display: flex;
-    margin-top: 0.6rem;
+    /* display: flex; */
+    /* margin-top: 0.6rem; */
+    bottom: 0;
 }
 
 footer a{
@@ -108,7 +112,8 @@ avec le modèle de grilles pour pouvoir les placer comme demandé */
 section{
     display: flex;
     margin-top: 0.6rem;
-    /* position: relative; */
+    position: relative;
+    padding-bottom: 0.6rem;
 }
 article{
     /* font-family: 'Lucida Sans Regular'; */
@@ -118,7 +123,7 @@ article h1{
     font-size: 1.8rem;
 }
 
-.container{
+.article{
     border-top: 0.06rem solid;
 }
 
@@ -129,48 +134,59 @@ aside{
 
 
         /*********** PAGE TABLEAU ********** */
+
+h1{
+    border-bottom: 0.06rem solid;
+}
+.responsive{
+    overflow-x: auto;
+    padding-bottom: 2rem;
+}
 table{
-    width: 100%;
+    border-collapse: separate;
+    width: 80%;
     height: auto;
     display: table;
-    position: relative;
+    /* position: relative; */
+    table-layout: fixed;
+    border-spacing: 1rem;
     /* width: ; */
     /* display: inline-block; */
-    border-top: 0.06rem solid;
-    border-spacing: 1rem;
+    /* border-spacing: 1rem;
     justify-content: space-between;
-    padding: 3rem;
+    /* font-family: 'Lucida Sans Sherif';
+    text-align: center; */
+    /* padding-bottom: ; */
 }
 
-caption{
+/* caption{
     font-size: 1.8rem;
     text-align: left;
-    /* padding-left: 5%; */
+    padding-left: 5%;
     font-weight: bold;
-}
-
-thead{
-    padding-bottom: 5%;
-}
-/* tbody{
-    padding-top: 4rem;
-    
 } */
 
-td{
+/* thead{
+    padding-bottom: 5%;
+} */
+/* tbody{
+    border-collapse: collapse;
+    border-spacing: 0rem;
+    
+} */
+th{
+
+}
+th, td{
+    font-family: 'Lucida Sans Sherif';
     text-align: center;
     /* font-weight: 100; */
 }
 
 td img{
-    width: 25%;
+    width: 50%;
 }
 
-/* .photo{
-    width: 25%;
-    height: auto;
-    flex: 0.1; 
-}*/
 
         /************* Formulaire********** */
 
@@ -184,27 +200,38 @@ td img{
     /*pour tous les écrans de taille inférieur à 768px*/
 
 @media screen and (max-width: 768px){
+    header{
+        width: 80%;
+    }
+    #text-logo{
+        font-size: small;
+    }
     
     aside{
         display: none;
     }
-    /* label{
-        display: none;
+    /* .responsive{
+        overflow-x: auto;
     } */
+    table{
+        table-layout: auto;
+    }
+
 
 }
 
 @media screen and (max-width: 576px) {
-    /* nav{
-        height: 50px;
-    } */
+    
     nav li{
         display: flex;
         flex-flow: column wrap;
         font-size: small;
     }
-    table{
-        width: 100%;
-    } 
+    /* table{
+        display: block;
+    }  */
+    .responsive{
+        /* margin: 3rem; */
+    }
 }
 
