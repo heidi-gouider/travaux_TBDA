@@ -18,7 +18,7 @@
 // }
 
 var nb1 = Number (prompt("Entrez un premier nombre"));
-var nb2 = Number (prompt("Entrez un deuxième nombre"));
+var nb2 = prompt("Entrez un deuxième nombre") *1;
 //Pour les valeurs des deux variables précédentes, j'ai utilisé le constructeur Number
 //pour éviter que la réponse soit une chaine de caractère. Ce constructeur permet de la convertir en nombe
 var operateur = prompt("Entrez un opérateur");
