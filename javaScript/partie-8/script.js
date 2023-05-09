@@ -5,15 +5,16 @@ var prenom = "prenom";
 i = 0;
 
 
-while (prenom!= ""){
-    prenom = prompt("Saisissez le prénom N°" + i + "\ ou Clic sur Annuler pour arrêter la saisie.");
-    i ++;
-    if (prenom == ""){
-        open("");
+while (prenom != "") {
+    prenom = prompt("Saisissez le prénom N°" + (i + 1) + "\ ou Clic sur Annuler pour arrêter la saisie.");
+    i++;
+    if (prenom == "") {
+        console.log[prenom];
+        console.log(prenom + [i - 1 + prenom]);
     }
+
 }
-// confirm (null);
-console.log(prenom + i);
+// console.log(prenom + i);
 
 
 
