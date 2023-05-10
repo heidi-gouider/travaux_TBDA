@@ -1,6 +1,6 @@
 // ex.1//////
 
-var nb = Number (prompt("Entrez un nombe"));
+var nb = parseInt (prompt("Entrez un nombe"));
 
 if (nb %= 2 == 0) {
     alert("nombre pair");
@@ -26,7 +26,8 @@ else {
 var nb1 = Number (prompt("Entrez un premier nombre"));
 var nb2 = prompt("Entrez un deuxième nombre") *1;
 //Pour les valeurs des deux variables précédentes, j'ai utilisé le constructeur Number
-//pour éviter que la réponse soit une chaine de caractère. Ce constructeur permet de la convertir en nombe
+//pour éviter que la réponse soit une chaine de caractère. Ce constructeur permet de la convertir en nombre
+// il y a aussi la fofnction parseInt()
 var operateur = prompt("Entrez un opérateur");
 
 switch (operateur){
