@@ -47,6 +47,6 @@ for (i=1; i<=N; i++) {
 }
 // ex.5
 
-var mot = prompt("Entrez un mot:");
+// var mot = prompt("Entrez un mot:");
 
 // for (i=0; )
