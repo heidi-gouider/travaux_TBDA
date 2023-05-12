@@ -9,3 +9,13 @@
     // }
 
     let age 
+let ages = "age";
+i = 0;
+    
+while (ages !== "") {
+    ages = prompt("Saisissez l'age N°" + (i + 1) + "\n ou Clic sur Annuler pour arrêter la saisie.");
+    i++;
+        // if (prenom == "") {
+            // console.log(prenom + i-1 + "");
+}
+console.log(ages+ i-1);
