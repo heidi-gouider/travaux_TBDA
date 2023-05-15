@@ -8,30 +8,23 @@ let tab = ["Audrey", "Aurélien", "Flavien", "Jérémy", "Laurent", "Melik", "No
 //3- pour décaler les cases suivantes de cet element
 //4- pour que la longueur du tableau rest la même et donc avoir une case vide
 
-//1-Pour chercher le prénom saisie par l'utilisateur dans mon tableau : 
-// la methode indexOf(indice) pour rechercher l'indice ou find pour trouver la valeur)?
-// let ok = tab.find(element => element == prenom);
-//2/ j'utilise la méthode splice pour modifier un element choisi
-// if (ok == true){
-    // ind = tab.indexOf(ok);
-// console.log(prenom);
-//     supr = tab.spicle(0, 1);
+//1.Pour chercher le prénom saisie par l'utilisateur dans mon tableau : 
+//=> la methode indexOf(indice) pour rechercher l'indice ou find pour trouver la valeur)?
 
-// }
-// else {
-//     console.log("erreur");
-// }
+let ok = tab.find(element => element == prenom);
+//2. pour supprimer l'element donné par sa valeur j'utilise la methode indexOf()pour trouver son indice
+// puis la methode splice() pour supprimer sa valeur en utilisant son indice
+let indice = tab.indexOf(ok);
+    if (indice !== -1){
+        tab.splice(indice, 1);
+    }
+    else if (indice === -1) {
+            console.log("erreur")
+    }
+console.log(tab);
+console.log(tab.length);
+
+//3.
 
 
 // function nouveauTableau(tab, prenom){
-//     if (tab.indexOf(prenom) > -1){
-//         tab.splice(prenom);
-//         console.log(tab);
-//     }
-//     else if (tab.indexOf(prenom) === -1) {
-//         console.log("erreur")
-//     }
-// }
-// nouveauTableau(tab, prenom);
-
-// supr = tab.splice(prenom)
