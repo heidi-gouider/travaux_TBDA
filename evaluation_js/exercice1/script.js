@@ -15,11 +15,35 @@ while (ages !== "") {
     ages = prompt("Saisissez l'age N°" + (i + 1) + "\n ou Clic sur Annuler pour arrêter la saisie.") * 1;
     i++;
 
-    console.log(ages + i - 1);
+    // console.log(ages + i - 1);
+
 }
+// ici je cree une variable objet (qui aura une propriété avec la valeur fonction)
 
+let category = {
+    jeune : ages<20,
+    moyen : ages>=20 & ages<=40,
+    vieux : ages>40,
 
+    // this. correspond à l'objet category
+    totalCat : function(){
+        return "jeunes : " + this.jeune +
+                "\n moyen" + this.moyen +
+                "\n vieux " + this.vieux;
+    }
+    
+}
+    // while (ages !== "") {
+    //     ages = prompt("Saisissez l'age N°" + (i + 1) + "\n ou Clic sur Annuler pour arrêter la saisie.") * 1;
+    //     i++;
+    
+    //     // console.log(ages + i - 1);
+    
+    // }
 
+    console.log(category.totalCat());
+
+//j'appelle la fonction
 
 // lorsque l'utilisateur valide un champ vide je lui indique le nombre
 // total de chaque catégorie entrée
