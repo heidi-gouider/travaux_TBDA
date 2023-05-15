@@ -1,7 +1,8 @@
 let prenom = prompt("Saisissez un prénom :");
 let tab = ["Audrey", "Aurélien", "Flavien", "Jérémy", "Laurent", "Melik", "Nouara", "Salem", "Samuel", "Stéphane"];
 
-// la première question que je me pose est quelle méthode utiliser ;)?
+//Après avoir déclaré les variables dont le programme aura besoin, 
+//la première question que je me pose est quelle méthode utiliser ;)?
 
 //1- pour trouver un element du tableau par sa valeur
 //2- pour supprimer un element du tableau
@@ -17,6 +18,7 @@ let ok = tab.find(element => element == prenom);
 let indice = tab.indexOf(ok);
     if (indice !== -1){
         tab.splice(indice, 1);
+        tab.push("");
     }
     else if (indice === -1) {
             console.log("erreur")
@@ -24,7 +26,8 @@ let indice = tab.indexOf(ok);
 console.log(tab);
 console.log(tab.length);
 
-//3.
+//3. pour déplacer les cases du tableau, je vais créer une fonction
 
+// tab.filter(tab => )
 
 // function nouveauTableau(tab, prenom){

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>évaluation</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Contact</h1>
+    <!-- je crée un formulaire.  -->
+        <form action=" http://bienvu.net/script.php" method= "post" id="formulaire">
+            <!-- <fieldset> -->
+            <div class="container" id="coordonnées">
+              <legend>Coordonnées</legend>
+              <div class="champ">
+                <label for="prénom">Votre prénom*:</label><input type="text" name="prénom">
+                <label for="nom">Votre nom*:</label><input type="text" name="nom">
+              </div>
+              <div class="champ">
+                <label for="sexe">Sexe*:</label><input type="checkbox" id="feminin" name="feminin">
+                <label for="feminin">Féminin</label><input type="checkbox" id="masculin" name="masculin">
+                <label for="masculin">Masculin</label>
+              </div>
+              <div class="champ">
+                <label for="naissance">Date de naissance:</label><input type="date" id="naissance" name="date de naissance">
+              </div>
+              <div class="champ">
+                <label for="code postal">Code postal*:</label><input type="number" name="code">
+              </div> 
+              <div class="champ">
+                <label for="adresse">Adresse:</label><input type="text" name="adresse">
+              </div>
+              <div class="champ">
+                <label for="ville">Ville:</label><input type="text" name="ville">
+              </div>
+              <div class="champ">
+                <label for="?">Email*:</label><input type="email" name="email">
+              </div>
+            <!-- </fieldset> -->
+            </div>
+            <!-- <fieldset> -->
+            <div class="container" id="demande">
+                <legend>Votre demande</legend>
+                <label for="select sujet">Sujet*</label>
+                <select name="sujet" id="select sujet">
+                    <option value="">Veuillez sélectionner un sujet</option> 
+                    <option value="commandes">Mes commandes</option>
+                    <option value="produit">Question sur un produit</option>
+                    <option value="réclamation">Réclamation</option>
+                    <option value="Autres">Autres</option>
+                </select><br>
+                <label for="question">Votre question*:</label><input type="text" name="question">
+            <!-- </fieldset> -->
+            </div>
+    <!-- Maintenant je crée une case à cliquer d'accord et de quoi soumettre le formulaire -->
+            <input type="checkbox" id="accord" name="accord"><legend>* J'accepte le traitement informatique de ce formulaire</legend>
+            <input type="submit" value="Valider" id="envoi">
+            <input type="submit" value="Annuler">
+        </form>
+      </div>
+    <script src="script.js"></script>
+</body>
+</html>

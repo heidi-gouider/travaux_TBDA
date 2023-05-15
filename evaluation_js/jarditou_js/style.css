@@ -1,0 +1,23 @@
+.container{
+    width: 100%;
+    /* margin: auto; */
+    padding-bottom: 5%;
+    border-radius: 5%; 
+    display: flex;
+}
+
+/* #formulaire{
+    /* j'utilise une valeur de type inside pour organiser le contenu du formulaire */
+    /* display: table;
+} */ */
+
+.champ{
+    margin-bottom: 2%;
+}
+
+input{
+    /* border: none; */
+    border-radius: 5%;
+    cursor: pointer;
+    margin-left: 2%;
+}

@@ -27,9 +27,7 @@ let category = {
 
     // this. correspond à l'objet category
     totalCat : function(){
-        return "jeunes : " + this.jeune +
-                "\n moyen" + this.moyen +
-                "\n vieux " + this.vieux;
+        console.log(this.jeune);
     }
     
 }
@@ -41,7 +39,7 @@ let category = {
     
     // }
 
-    console.log(category.totalCat());
+    category.totalCat();
 
 //j'appelle la fonction
 
@@ -49,7 +47,7 @@ let category = {
 // total de chaque catégorie entrée
 // let ages = jeune, moyen, vieux;
 
-// function totalCat(nbJeune, nbMoyen, nbVieux) {
+// let totalCat = (nbJeune, nbMoyen, nbVieux) => {
 //     // let ages = jeune, moyen, vieux;
 
 //     if (ages > 40) {
