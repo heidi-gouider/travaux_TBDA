@@ -1,10 +1,9 @@
-// je demande à l'utilisateur d'indi
-// var saisie = prompt("Entrer le nombres d'elements");
-// var tableau = new Array(saisie, elements ='');
+//je demande àl'utilisateur d'indiquer un nombre pour la taille du tableau
+//j'incrémente dans une boucle pour que l'U. puisse entrer ensuite un nombre indéfifie
+//de valeurs
 
-
-let tableau = new Array (taille = prompt("Entrer le nombres de lignes")*1, elements = '');
-console.log(tableau);
+let tableau = parseInt(taille = prompt("Entrer le nombres de lignes"),elements = '');
+// console.log(tableau);
 
 for(i=0; i<=taille; i++){
     let valeurElement = prompt("entrer l'element n°" + (i+1));
