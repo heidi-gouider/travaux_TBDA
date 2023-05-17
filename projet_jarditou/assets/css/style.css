@@ -237,11 +237,12 @@ input{
     /*pour tous les écrans de taille inférieur à 768px*/
 
 @media screen and (max-width: 768px){
-    header{
-        /* width: 80%; */
-        /* display: flex; */
-        /* display: inline-block; */
-    }
+    /* header{
+        width: 80%; 
+        display: flex;
+        display: inline-block;
+    } */
+    
     #img-logo{
         width: 50%;
     }

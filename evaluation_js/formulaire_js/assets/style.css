@@ -1,0 +1,200 @@
+html,body{                 /* <= sélecteur */
+    width: 100%;           /* <= suite d'instructions comprisent entre des {} */
+    height: 100%;
+    margin: 0; padding: 0;
+    position: relative;
+    font-size: 100%;
+} 
+
+@font-face {
+    font-family: "Ubuntu Light";
+    src: url("assets/fonts/Ubuntu-Light.ttf") format(ttf);
+}
+
+/****************** Le header *********************/
+
+/* Je vais utiliser la propriété display pour modifier l'emplacement des éléments */
+header{
+    width: 100%;
+    height: auto;
+    /* display: inline-block; */
+    display: flex;
+    margin-top: 2%;
+    /* display: block; */
+    /* position: relative; */
+}
+#img-logo{
+    width: 25%;
+    height: 80%;
+    /* position: relative; */
+    /* flex: initial; */
+}
+
+#text-logo{
+    /* /* width: 100%; */
+    height: auto;
+    /* margin-left: 30%; */
+    /* margin-bottom: auto; */
+    /* align-items: first baseline; */
+    padding-left: 30%;
+    /* position: relative; */
+    /* margin-top: 10%; */
+    padding-top: 4%;
+    font-size: 1.2rem;
+    font-weight: lighter;
+       
+}
+
+#img-promo{
+    width: 100%;
+    height: auto;
+}
+
+        /******** Le footer *************/
+
+footer{
+    width: 100%;
+    height: auto;
+    background-color: black;
+    position: absolute;
+    padding: 2%;
+}
+        
+.liens{
+    position: relative;
+    bottom: 0;
+}
+        
+.liens a{
+    justify-items: space-between;
+        
+}
+
+        /*********** Le menu **********/
+
+nav{
+    /* width: 100%;
+    height: auto; */
+    /* position: relative; */
+    display: flex;
+    background-color: black;
+    margin-bottom: 10px;
+    padding: 1%;
+}
+
+/* le inline-block permet d'espacer les boîtes*/
+nav li{
+    display: inline-block;
+    list-style: none;
+}
+
+/* Les liens du menu et du pied de page auront la même apparence */
+a{
+    /* text-decoration: none; */
+    width: auto;
+    color: white;
+    padding-top: 10px;
+    
+}
+
+a:hover{
+    color: rgb(25, 153, 212);
+}
+
+
+
+/***********le formulaire************/
+
+.container{
+    /* display: flex;
+    place-content: center;
+    flex-direction: column; */
+    margin: 5%;
+}
+
+h1 {
+    margin-left: 10%;
+}
+fieldset{
+    width: 60%;
+    align-items: center;
+}
+label{
+    display: inline-block;
+    min-width: 200px;
+}
+
+/* #formulaire{
+    /* j'utilise une valeur de type inside pour organiser le contenu du formulaire */
+    /* display: table;
+} */ 
+
+.champ{
+    margin-bottom: 2%;
+}
+
+small {
+    color: red;
+    text-align: end;
+}
+input{
+    border-radius: 5%;
+    cursor: pointer;
+    margin-left: 2%;
+}
+
+.select {
+    margin-bottom: 15px;
+
+
+}
+
+.bouton {
+    margin-top: 20px;
+    /* margin-bottom: 20px; */
+}
+
+/* # male {
+
+} */
+
+/***********responsive**********/
+
+@media screen and (max-width: 768px){
+    /* header{
+        width: 80%; */
+        /* display: flex; */
+        /* /* display: inline-block; */
+    
+    #img-logo{
+        width: 50%;
+    }
+    #text-logo{
+        /* position: absolute; */
+        /* flex: none; */
+        font-size: 80%;
+        padding-top: 10%;
+        padding-left: 10%;
+        margin: 0;
+    }
+
+    nav{
+        padding: 0;
+    }}
+
+
+    /*************PAGE CONTACT ****************/
+
+    /* .container{
+        height: auto;
+    } */
+#formulaire{
+    padding: 2%;
+}
+
+@media screen and (max-width: 576px) {
+    nav li{
+        display: flex;
+        flex-flow: column wrap;
+        font-size: small;
+    }}

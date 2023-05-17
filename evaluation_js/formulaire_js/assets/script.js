@@ -3,28 +3,44 @@ pour me permettre par la suite d'acceder aux différents éléments grâce à le
 let form = document.querySelector("#contactForm");
 
 // je vais écouter la modification des champs obligatoires saisi par l'utilisateur
-let validation = document.getElementById("soumettre");
-validation.addEventListener("click", function (e) {
+form.valider.addEventListener("click", function (e) {
         if (form.prenom.validity.valueMissing) {
             e.preventDefault();
-            prenomMiss.textContent = "Vous devez remplir ce champ";
+            prenomMiss.textContent = "Ce champ est obligatoire";
+        
         }
         else if (form.nom.validity.valueMissing) {
             e.preventDefault();
-            nomMiss.textContent = "Vous devez remplir ce champ";
+            nomMiss.textContent = "Ce champ est obligatoire";
+
         }
         else if (form.feminin.validity.valueMissing || form.masculin.validity.valueMissing) {
             e.preventDefault();
-            sexeMiss.textContent = "Vous devez remplir ce champ";
+            sexeMiss.textContent = "Ce champ est obligatoire";
         }
         else {
-            validation.setCustomValidity("");
+            form.valider.setCustomValidity("");
         }
     });
+
+// form.annuler.addEventListener("click", function(event) {
+//     form.annuler.setCustomValidity("");
+// });
+
 /* je vais également m'assurer que la saisie de l'utilisateur soit correct
-c'est à dire accepter que le nom soit tout en minuscule
 Pour ça je vais utiliser une expression régulière(regex)*/
 // let verif = new RegExp("");
+
+form.email.addEventListener("change", function() {
+    validEmail(this);
+});
+
+let validEmail = function (inputEmail) {
+    let emailRegExp = new RegExp(
+    "^[a-zA-Z0-9;-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$", "g"
+    );
+};
+
 
 // let prenom = document.getElementById("prenom");
 // let prenomMiss = document.getElementById("prenomMiss");
