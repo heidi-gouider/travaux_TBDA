@@ -22,12 +22,15 @@ label{
     margin-bottom: 2%;
 }
 
-span {
+small {
     color: red;
 }
 input{
-    /* border: none; */
     border-radius: 5%;
     cursor: pointer;
     margin-left: 2%;
 }
+
+/* # male {
+
+} */

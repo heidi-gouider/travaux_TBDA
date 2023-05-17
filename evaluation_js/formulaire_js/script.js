@@ -1,27 +1,30 @@
 /* je vais choisir la méthode querySelector pour selectionner le formulaire de contactpar son identifiant ("#")
 pour me permettre par la suite d'acceder aux différents éléments grâce à leur name*/
 let form = document.querySelector("#contactForm");
-// form.prenom;
 
-
-// let validation = document.getElementById("soumettre");
-//validation.addEventListener("click", function (e) {
-    //     if (form.prenom.validity.valueMissing) {
-    //         e.preventDefault();
-    //         prenomMiss.textContent = "Vous devez remplir ce champ";
-    //     }
-    //     else if (nom.validity.valueMissing) {
-    //         e.preventDefault();
-    //         nomMiss.textContent = "Vous devez remplir ce champ";
-    //     }
-        // else {
-        //     validation.setCustomValidity("");
-        // }
-    // });
-
-/*je vais chercher une méthode pour que ma validation comprenne chaque élément de saisie
-la question que je me pose est est ce que je peut declarer une variable en tant qu'obet qui
-me permettrait de mettre en argument tous les éléments?*/
+// je vais écouter la modification des champs obligatoires saisi par l'utilisateur
+let validation = document.getElementById("soumettre");
+validation.addEventListener("click", function (e) {
+        if (form.prenom.validity.valueMissing) {
+            e.preventDefault();
+            prenomMiss.textContent = "Vous devez remplir ce champ";
+        }
+        else if (form.nom.validity.valueMissing) {
+            e.preventDefault();
+            nomMiss.textContent = "Vous devez remplir ce champ";
+        }
+        else if (form.feminin.validity.valueMissing || form.masculin.validity.valueMissing) {
+            e.preventDefault();
+            sexeMiss.textContent = "Vous devez remplir ce champ";
+        }
+        else {
+            validation.setCustomValidity("");
+        }
+    });
+/* je vais également m'assurer que la saisie de l'utilisateur soit correct
+c'est à dire accepter que le nom soit tout en minuscule
+Pour ça je vais utiliser une expression régulière(regex)*/
+// let verif = new RegExp("");
 
 // let prenom = document.getElementById("prenom");
 // let prenomMiss = document.getElementById("prenomMiss");

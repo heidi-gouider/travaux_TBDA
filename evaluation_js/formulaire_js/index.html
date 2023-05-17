@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>évaluation/formulaire</title>
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -20,24 +21,29 @@
       <!-- <div class="container" id="coordonnées"> -->
       <div class="champ">
         <label for="prenom">Votre prénom*:</label>
-        <input class="saisie" type="text" name="prenom" id="prenom" required="required" maxlength="15">
-        <span id="prenomMiss"></span><br>
+        <input type="text" name="prenom" required="required" maxlength="15">
+        <small id="prenomMiss"></small><br>
       </div>
       <div class="champ">
         <label for="nom">Votre nom*:</label>
-        <input class="saisie" type="text" name="nom" id="nom" required="required" maxlength="20">
-        <span id="nomMiss"></span><br>
+        <input type="text" name="nom" required="required" maxlength="20">
+        <small id="nomMiss"></small><br>
       </div>
       <div class="champ">
-        <label for="sexe">Sexe*:</label><input type="checkbox" id="feminin" name="feminin">
-        <label for="feminin">Féminin</label><input type="checkbox" id="masculin" name="masculin">
+        <label for="sexe">Sexe*:</label>
+        <label for="feminin">Féminin</label>
+        <input type="checkbox" name="feminin" id="fem">
         <label for="masculin">Masculin</label>
+        <input type="checkbox" id="male" name="masculin">
+        <small id="sexeMiss"></small><br>
       </div>
       <div class="champ">
         <label for="naissance">Date de naissance:</label><input type="date" id="naissance" name="date de naissance">
       </div>
       <div class="champ">
-        <label for="code postal">Code postal*:</label><input type="number" name="code">
+        <label for="postal">Code postal*:</label>
+        <input type="number" name="postal">
+        <small id="postalMiss"></small>
       </div>
       <div class="champ">
         <label for="adresse">Adresse:</label><input type="text" name="adresse">
@@ -50,8 +56,9 @@
       </div>
     </fieldset>
     <fieldset>
-      <div class="container" id="demande">
-        <legend>Votre demande</legend>
+      <!-- <div class="container" id="demande"> -->
+      <legend>Votre demande</legend>
+      <div class="form-group">
         <label for="select sujet">Sujet*</label>
         <select name="sujet" id="select sujet">
           <option value="">Veuillez sélectionner un sujet</option>
@@ -60,8 +67,9 @@
           <option value="réclamation">Réclamation</option>
           <option value="Autres">Autres</option>
         </select><br>
-        <label for="question">Votre question*:</label><input type="text" name="question">
       </div>
+        <label for="question">Votre question*:</label><input type="text" name="question">
+      <!-- </div> -->
     </fieldset>
     <!-- Maintenant je crée une case à cliquer d'accord et de quoi soumettre le formulaire -->
     <input type="checkbox" id="accord" name="accord">
@@ -70,6 +78,7 @@
     <input type="submit" value="Annuler">
   </form>
   <!-- </div> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script> -->
   <script src="script.js"></script>
 </body>
 
