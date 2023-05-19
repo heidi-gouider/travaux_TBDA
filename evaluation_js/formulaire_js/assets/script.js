@@ -5,28 +5,32 @@
 pour me permettre par la suite d'acceder aux différents éléments grâce à leur name*/
 let form = document.querySelector("#contactForm");
 
-/* je vais créer une écoute 
-lorsque le bouton de validation est clické pour permettre
-ou non l'envoie des données saisies dans le formulaire.
-Si les valeurs entrées ne sont pas
-valides, alors le formulare ne sera pas envoyé et un message sera transmis à l'utilisateur
-sinon le formulaire sera envoyé*/
+/* je vais créer une écoute lorsque le bouton de validation est clické pour indiquer à l'utilisateur
+si un ou pls champs obligatoires sont vides 
+s'il manque une ou pls valeurs les données du formulaire ne seront pas envoyées
+*/
 
 form.valider.addEventListener("click", function (e) {
+    e.preventDefault();
         if (form.prenom.validity.valueMissing) {
-            e.preventDefault();
+            // e.preventDefault();
             form.prenom.style.border = " 1px solid red";
             prenomMiss.textContent = "Ce champ est obligatoire";
         
         }
         else if (form.nom.validity.valueMissing) {
-            e.preventDefault();
+            // e.preventDefault();
+            form.nom.style.border = " 1px solid red";
             nomMiss.textContent = "Ce champ est obligatoire";
 
         }
         else if (form.feminin.validity.valueMissing || form.masculin.validity.valueMissing) {
-            e.preventDefault();
+            // e.preventDefault();
+            form.sexe.style.border = " 1px solid red";
             sexeMiss.textContent = "Ce champ est obligatoire";
+        }
+        else if (validEmail(form.email)==fasle){
+            // e.preventDefault();
         }
         else {
             form.valider.setCustomValidity("");
@@ -67,16 +71,23 @@ let validEmail = function (inputEmail) {
     "^[a-zA-Z0-9;-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$", "g"
     );
 
-//je vérifie si la valeur saisi par l'utilisateur est vrai ou fausse
+//je vérifie si la valeur saisi par l'utilisateur respecte l'expression régulière(vrai ou fausse)
 //si l'email est valide les bordures de l'input seront vertes
 //sinon, un message apparaitra en rouge
+//je demande ensuite à la fonction de renvoyer l'information si vrai ou faux
 let testEmail = emailRegExp.test (inputEmail.value);
 let small = inputEmail.nextElementSibling;
-let borderInput = inputEmail.styleBackgroundColor;
+let borderInput = document.getElementsByClassName("champ")[1].style.border;
 
- if(testEmail) {
-    borderInput = "red";
- }
+if(testEmail == fasle) {
+    borderInput = "1px solid red";
+    small.innertHtml = "email non valide";
+    small.classList.add = "text-danger";
+    return fasle;
+}
+else {
+    return true;
+}
 };
 //ensuite je fais en sorte que si la saisi est correct elle puisse égale est envoyé
 
