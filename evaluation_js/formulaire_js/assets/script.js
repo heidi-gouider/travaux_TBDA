@@ -1,11 +1,21 @@
-/* je vais choisir la méthode querySelector pour selectionner le formulaire de contactpar son identifiant ("#")
+
+/********contrôle envoie des données saisies ***********/
+
+/* je vais choisir la méthode querySelector pour selectionner le formulaire de contact par son identifiant ("#")
 pour me permettre par la suite d'acceder aux différents éléments grâce à leur name*/
 let form = document.querySelector("#contactForm");
 
-// je vais écouter la modification des champs obligatoires saisi par l'utilisateur
+/* je vais créer une écoute 
+lorsque le bouton de validation est clické pour permettre
+ou non l'envoie des données saisies dans le formulaire.
+Si les valeurs entrées ne sont pas
+valides, alors le formulare ne sera pas envoyé et un message sera transmis à l'utilisateur
+sinon le formulaire sera envoyé*/
+
 form.valider.addEventListener("click", function (e) {
         if (form.prenom.validity.valueMissing) {
             e.preventDefault();
+            form.prenom.style.border = " 1px solid red";
             prenomMiss.textContent = "Ce champ est obligatoire";
         
         }
@@ -23,6 +33,23 @@ form.valider.addEventListener("click", function (e) {
         }
     });
 
+    // form.valider.addEventListener("click", function (e) {
+    //     let formInput = document.getElementsByClassName('champ') [1];
+    //     let small = formInput.nextElementSibling;
+
+    //     if (form.prenom.validity.valueMissing || form.nom.validity.valueMissing ||form.feminin.validity.valueMissing || form.masculin.validity.valueMissing ) {
+    //         e.preventDefault();
+    //         // formInput.style.border = " 1px solid red";
+    //         small.innertHtml = "champ obligatoire";
+    //         small.classList.add = "text-danger";
+        
+    //     }
+    //     else {
+    //         form.valider.setCustomValidity("");
+    //     }
+    // });
+
+
 // form.annuler.addEventListener("click", function(event) {
 //     form.annuler.setCustomValidity("");
 // });
@@ -39,7 +66,20 @@ let validEmail = function (inputEmail) {
     let emailRegExp = new RegExp(
     "^[a-zA-Z0-9;-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$", "g"
     );
+
+//je vérifie si la valeur saisi par l'utilisateur est vrai ou fausse
+//si l'email est valide les bordures de l'input seront vertes
+//sinon, un message apparaitra en rouge
+let testEmail = emailRegExp.test (inputEmail.value);
+let small = inputEmail.nextElementSibling;
+let borderInput = inputEmail.styleBackgroundColor;
+
+ if(testEmail) {
+    borderInput = "red";
+ }
 };
+//ensuite je fais en sorte que si la saisi est correct elle puisse égale est envoyé
+
 
 
 // let prenom = document.getElementById("prenom");
