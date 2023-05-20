@@ -5,14 +5,19 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>évaluation/formulaire</title>
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
-  <link rel="stylesheet" type="text/css" href="assets/style.css">
+  <title>Jarditou</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets\css\style1.css">
 </head>
 
 <body>
+
+  <!-- Le menu sera présent sur toutes les pages du site ainsi que l'image
+promo. Pour ça je crée une div et une class que j'appellerais "menu".
+Celle-ci regroupera tous les éléments que je souhaiterais inclure dans les autres pages -->
+  <!-- <div class="menu"> -->
   <header>
-    <!-- <div class="logo"> -->
+    <!-- <div class="menu" id="logo"> -->
     <img id="img-logo" src="assets/img/logo.jpg" alt="logo" title="logo">
     <h1 id="text-logo">Tout le jardin</h1>
     <!-- </div> -->
@@ -31,78 +36,36 @@
 
   </nav>
   <img id="img-promo" src="assets/img/promotion.jpg" alt="promo" title="promo">
+  <!-- </div> -->
 
-  <h1>Contact</h1>
-  <!-- je crée un formulaire.  -->
-  <form action="" method="post" id="contactForm">
-    <!-- http://bienvu.net/script.php -->
-    <div class="container">
-      <fieldset>
-        <!-- <legend>Coordonnées</legend> -->
-        <!-- <div class="container" id="coordonnées"> -->
-        <div class="champ">
-          <label for="prenom">Votre prénom*:</label>
-          <input type="text" name="prenom" required="required" maxlength="15"><br>
-          <small id="prenomMiss"></small><br>
-        </div>
-        <div class="champ">
-          <label for="nom">Votre nom*:</label>
-          <input type="text" name="nom" required="required" maxlength="20">
-          <small id="nomMiss"></small><br>
-        </div>
-        <div class="champ">
-          <label for="sexe">Sexe*:</label>
-          <label for="feminin">Féminin</label>
-          <input type="checkbox" name="feminin" required="required">
-          <label for="masculin">Masculin</label>
-          <input type="checkbox" name="masculin" required="required"><br>
-          <small id="sexeMiss"></small><br>
-        </div>
-        <div class="champ">
-          <label for="naissance">Date de naissance*:</label>
-          <input type="date" name="naissance" required="required">
-        </div>
-        <div class="champ">
-          <label for="postal">Code postal*:</label>
-          <input type="number" name="postal" required="required">
-          <small id="postalMiss"></small>
-        </div>
-        <div class="champ">
-          <label for="adresse">Adresse:</label>
-          <input type="text" name="adresse" required="required">
-        </div>
-        <div class="champ">
-          <label for="ville">Ville:</label><input type="text" name="ville">
-        </div>
-        <div class="champ">
-          <label for="?">Email*:</label>
-          <input type="email" name="email" required="required">
-          <small id="validEmail"></small>
-        </div>
-      </fieldset>
-      <fieldset>
-        <!-- <div class="container" id="demande"> -->
-        <legend>Votre demande</legend>
-        <label class="select" for="select sujet">Sujet*</label>
-        <select name="sujet" id="select sujet">
-          <option value="">Veuillez sélectionner un sujet</option>
-          <option value="commandes">Mes commandes</option>
-          <option value="produit">Question sur un produit</option>
-          <option value="réclamation">Réclamation</option>
-          <option value="Autres">Autres</option>
-        </select><br>
-        <label for="question">Votre question*:</label><input type="text" name="question">
-        <!-- </div> -->
-      </fieldset>
-      <!-- Maintenant je crée une case à cliquer d'accord et de quoi soumettre le formulaire -->
-      <input type="checkbox" id="accord" name="accord">
-      <legend>* J'accepte le traitement informatique de ce formulaire</legend>
-      <div class="bouton">
-        <input type="submit" name="valider" value="Valider">
-        <input type="submit" name="anniler" value="Annuler">
+  <!-- </header> -->
+
+  <!-- Pour le contenu de la page, je crée des blocks fixes(balises)
+Celles-ci me permettront en les sélectionnant dans mon css de les rendre flexibles
+pour les positionner. Je me pose la question de la surcharge de balises
+je vais donc sûrement modifier au fur et à mesure vers plus de simplicité-->
+  <section>
+    <article>
+      <h1>Accueil</h1>
+      <div class="article">
+        <h4>L'entreprise</h4>
+        <p>Notre entreprise familiale met tout son savoir-faire à votre disposition dans le domaine du jardin et du
+          paysagisme.
+        <p>Créée il y a 70 ans, notre entreprise vend fleurs, arbustes, matériel à main et motorisés.
+        <p>Implantés à Amiens, nous intervenons dans tout le département de la Somme : Albert, Doullens, Péronne,
+          Abbeville, Corbie </p>
+
+        <h4>Qualité</h4>
+        <p>Nous mettons à votre disposition un service personnalisé, avec 1 seul interlocuteur durant tout votre projet.
+        <p>Vous serez séduit par notre expertise, nos compétences et notre sérieux.</p>
+        <h4>Devis gratuit</h4>
+        <p>Vous pouvez bien sûr contacter pour de plus amples informations ou pour une demande d’intervention.</p>
+        <p>Vous souhaitez un devis ? Nous vous le réalisons gratuitement.</p>
       </div>
-    </div>
-  </form>
+    </article>
+    <aside>[Colonne droite]</aside>
+  </section>
+
   <footer>
     <!-- <ul>
       <li><a href="">Mentions légales</a></li>
@@ -110,16 +73,11 @@
       <li><a href="">Plan du site</a></li>
     </ul> -->
     <div class="liens">
-      <a href="">Mentions légales
-        <a href="">Horaires</a>
-        <a href="">Plan du site
+      <a href="mentions">Mentions légales
+        <a href="horaires">Horaires</a>
+        <a href="plan">Plan du site
     </div>
-
   </footer>
-
-  <!-- </div> -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script> -->
-  <script src="assets/script.js"></script>
+  <script src="assets\js\script.js"></script>
+  <script src="assets\js\konami.js"></script>
 </body>
-
-</html>
