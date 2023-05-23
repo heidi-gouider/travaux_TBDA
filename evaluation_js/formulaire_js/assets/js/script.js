@@ -55,7 +55,9 @@ obligatoires. Je n'ai pas encore trouvé la solution .... research going on ;)*/
         };
 
         // erreur de script pour cette condition !!!!! A corriger /nb.voir le propriété checked(balise html)
-        if ((form.feminin.validity.valueMissing) || (form.masculin.validity.valueMissing)) {
+        //  ici je laisse le commentaire car j'ai enfin trouvé la solution !! 
+        //  en plus de l'erreur d'oublie du checked, ma condition était : si ou ...  Bam trouvé!
+        if ((!form.feminin.checked ) && (!form.masculin.checked )) {
             // e.preventDefault();
             // form.feminin.style.border, form.masculin.style.border = " 1px solid red";
             sexeMiss.textContent = "Ce champ est obligatoire";
