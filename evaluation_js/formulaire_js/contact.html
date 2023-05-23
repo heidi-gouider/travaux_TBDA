@@ -34,15 +34,15 @@
 
   <h1>Contact</h1>
   <!-- je crée un formulaire.  -->
-  <form action="" method="post" id="contactForm">
+  <form action="" method="post" id="contact">
     <!-- http://bienvu.net/script.php -->
     <div class="container">
       <fieldset>
         <!-- <legend>Coordonnées</legend> -->
-        <!-- <div class="container" id="coordonnées"> -->
+        <!-- <div id="champs_obligatoires"> -->
         <div class="champ">
           <label for="prenom">Votre prénom*:</label>
-          <input type="text" name="prenom" required="required" maxlength="15"><br>
+          <input type="text" name="prenom" required="required" maxlength="15">
           <small id="prenomMiss"></small><br>
         </div>
         <div class="champ">
@@ -58,15 +58,17 @@
           <input type="checkbox" name="masculin" required="required"><br>
           <small id="sexeMiss"></small><br>
         </div>
+        <!-- </div> -->
         <div class="champ">
           <label for="naissance">Date de naissance*:</label>
           <input type="date" name="naissance" required="required">
         </div>
         <div class="champ">
-          <label for="postal">Code postal*:</label>
-          <input type="number" name="postal" required="required">
-          <small id="postalMiss"></small>
+          <label for="cp">Code postal*:</label>
+          <input type="number" name="cp" required="required">
+          <small id="cpMiss"></small>
         </div>
+        <!-- </div> -->
         <div class="champ">
           <label for="adresse">Adresse:</label>
           <input type="text" name="adresse" required="required">
