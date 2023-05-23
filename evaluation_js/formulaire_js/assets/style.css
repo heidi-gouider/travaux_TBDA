@@ -115,7 +115,7 @@ a:hover {
     place-content: center;
     flex-direction: column; */
     margin: 5%;
-    background-color: #C6D8D3;
+    /* background-color: #C6D8D3; */
 }
 
 h1 {
@@ -124,6 +124,7 @@ h1 {
 
 fieldset {
     width: 60%;
+    background-color: #C6D8D3;
     align-items: center;
 }
 
@@ -137,7 +138,8 @@ label {
 /* display: table;
 } */
 
-.champ {
+.champ,
+.champ_obligatoire {
     margin-bottom: 2%;
 }
 

@@ -1,27 +1,42 @@
 
-/********contrôle envoie des données saisies ***********/
+/******** VALIDATION ENVOIE FORMULAIRE DE CONTACT ***********/
+                /************************/
 
-/* je vais choisir la méthode querySelector pour selectionner le formulaire de contact par son identifiant ("#")
-pour me permettre par la suite d'acceder aux différents éléments grâce à leur name*/
+/* je choisi la méthode querySelector et selectionne le formulaire de contact par son identifiant ("#")
+pour me permettre par la suite d'acceder aux différents éléments grâce à leur nom*/
+
 let form = document.querySelector("#contact");
-// document.forms("contact");
+// document.forms ("contact");
 
-/* je vais créer une écoute lorsque le bouton de validation est clické pour indiquer à l'utilisateur
-si un ou pls champs obligatoires sont vides 
-s'il manque une ou pls valeurs les données du formulaire ne seront pas envoyées
+/* je vais créer un évennement d'écoute lorsque le bouton de validation est clické pour indiquer à l'utilisateur
+si un ou pls champs obligatoires n'est pas complété. 
+S'il manque une ou pls valeurs un message s'affichera.
 */
+/************** TEST POUR LES PREMIERS CHAMPS OBLIGATOIRES AVEC UN CLICK SUR LE BOUTON VALIDER ******************** */
 
-form.valider.addEventListener("click", function (event) {
+    // form.addEventListener("submit", function (event) {
+    form.valider.addEventListener("click", function (event) {
+// document.forms["contact"].addEventListener("submit", function (event) {
     event.preventDefault();
 
-    // let inputs = document.getElementById("champs-obligatoires").getElementsByTagName("input");
 
-    // for (let i = 0; i < inputs.length; i++) {
-    //     if (inputs[i].validity.valueMissing)
-    //     inputs.style.border = " 1px solid red";
+/*ici j'aimerais me servir d'une boucle (pour éviter les longueurs :) !) et vérifier les valeurs manquantes de chaque champs 
+obligatoires. Je n'ai pas encore trouvé la solution .... research going on ;)*/
 
-    // }
+//     let inputs = document.getElementsByClassName("champ_obligatoire").getElementsByTagName("input");
+//     let inputs = this;
 
+//     for (let i = 0; i < inputs.length; i++) {
+
+//         if (inputs[i].valueMissing)
+//         // (inputs[i].validity.valueMissing) 
+//         {
+//             // inputs.style.border = " 1px solid red";
+//      console.log ("erreur");
+//         }
+        
+//     };
+// });
   
 /* je vais utiliser la propriété validity.valueMissing
    pour vérifier si les champ de saisie ne sont pas vide et renvoyer un message si c'est le cas.*/
@@ -31,20 +46,22 @@ form.valider.addEventListener("click", function (event) {
             // e.preventDefault();
             form.prenom.style.border = " 1px solid red";
             prenomMiss.textContent = "Ce champ est obligatoire";
-            // form.small.textContent = "Ce champ est obligatoire";
+        };
         
-        }
         if (form.nom.validity.valueMissing) {
             // e.preventDefault();
             form.nom.style.border = " 1px solid red";
             nomMiss.textContent = "Ce champ est obligatoire";
+        };
 
-        }
-        if (form.feminin.validity.valueMissing || form.masculin.validity.valueMissing) {
+        // erreur de script pour cette condition !!!!! A corriger /nb.voir le propriété checked(balise html)
+        if ((form.feminin.validity.valueMissing) || (form.masculin.validity.valueMissing)) {
             // e.preventDefault();
-            // checkbox.style.border = " 1px solid red";
+            // form.feminin.style.border, form.masculin.style.border = " 1px solid red";
             sexeMiss.textContent = "Ce champ est obligatoire";
-        }
+        };
+
+        // if (form.sujet) pour la liste déroulante, il faut s'assurer que l'U selectionne(click?) un de [2 à 5] de la liste
 
 //je vérifie si la valeur saisi par l'utilisateur respecte l'expression régulière suivante
 
@@ -65,10 +82,8 @@ form.valider.addEventListener("click", function (event) {
         else {
             form.valider.setCustomValidity("");
         }
-    
-
-
     });
+// });
 
     // form.valider.addEventListener("click", function (e) {
     //     // let formInput = document.getElementsByClassName('champ') [1];
