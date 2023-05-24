@@ -62,10 +62,12 @@
         <div class="champ_obligatoire">
           <label for="naissance">Date de naissance*:</label>
           <input type="date" name="naissance" required="required">
+          <small id="naissanceMiss"></small>
+
         </div>
         <div class="champ_obligatoire">
           <label for="cp">Code postal*:</label>
-          <input type="number" name="cp" required="required">
+          <input type="text" name="cp" required="required">
           <small id="cpMiss"></small>
         </div>
         <!-- </div> -->
@@ -105,6 +107,7 @@
       </div>
     </div>
   </form>
+  <h1 id="succesEnvoie"></h1>
   <footer>
     <!-- <ul>
       <li><a href="">Mentions légales</a></li>
