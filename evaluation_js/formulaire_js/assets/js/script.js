@@ -49,11 +49,16 @@ obligatoires. Je n'ai pas encore trouvé la solution .... research going on ;)*/
    pour vérifier si les champ de saisie ne sont pas vide et renvoyer un message si c'est le cas.*/
 
    // pour le prénom et le nom il faudra aussi créer un regExp que je pourrais mettre dans la condition avec un opérateur logique
-    let identityRegExp = new RegExp (
+    let prenomRegExp = new RegExp (
     "^[a-zA-Z-]$"
     // {2,10}
     );
-    let testPrenom = identityRegExp.test(form.prenom);
+    let nomRegExp = new RegExp (
+        "^[a-zA-Z-]$"
+        // {2,10}
+    );
+    
+    // let testPrenom = identityRegExp.test(form.prenom);
 
 
         // if ((form.prenom.validity.valueMissing) || (form.prenom!=identityRegExp)) {
@@ -62,20 +67,17 @@ obligatoires. Je n'ai pas encore trouvé la solution .... research going on ;)*/
             form.prenom.style.border = " 1px solid red";
             prenomMiss.textContent = "Ce champ est obligatoire";
         }
-        else if (form.prenom!==identityRegExp) {
+        else if (form.prenom!==prenomRegExp) {
             form.prenom.style.border = " 1px solid red";
             prenomMiss.textContent = "erreur de saisie";
         };
-        // if (!testPrenom) {
-        //     form.prenom.style.border = " 1px solid red";
-        //     prenomMiss.textContent = "erreur de saisie";
-        // };
+
         if (form.nom.validity.valueMissing) {
             // e.preventDefault();
             form.nom.style.border = " 1px solid red";
             nomMiss.textContent = "Ce champ est obligatoire";
         }
-        else if (form.nom!==identityRegExp) {
+        else if (form.nom!==nomRegExp) {
             form.nom.style.border = " 1px solid red";
             nomMiss.textContent = "erreur de saisie";
         };
@@ -103,7 +105,7 @@ obligatoires. Je n'ai pas encore trouvé la solution .... research going on ;)*/
         };
 
     // let cpRegExp = new RegExp(
-    //     "^[0-9]{5}$", "g"
+    //     "^[0-9]{5}$"
     // );
     
     //     if (form.cp.validity.valueMissing) {

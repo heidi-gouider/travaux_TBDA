@@ -1,13 +1,17 @@
 /* Dans ce fichier, je vais définir les propriétés graphiques de mes balises.
 pour cela, j'utilise des sélecteurs, pour chaqun d'entre eux je leur donnerais des instructions*/
 
-html,body{                 /* <= sélecteur */
-    width: 100%;           /* <= suite d'instructions comprisent entre des {} */
+html,
+body {
+    /* <= sélecteur */
+    width: 100%;
+    /* <= suite d'instructions comprisent entre des {} */
     height: 100%;
-    margin: 0; padding: 0;
+    margin: 0;
+    padding: 0;
     position: relative;
     font-size: 100%;
-} 
+}
 
 @font-face {
     font-family: "Ubuntu Light";
@@ -17,7 +21,7 @@ html,body{                 /* <= sélecteur */
 /****************** Le header *********************/
 
 /* Je vais utiliser la propriété display pour modifier l'emplacement des éléments */
-header{
+header {
     width: 100%;
     height: auto;
     /* display: inline-block; */
@@ -26,14 +30,15 @@ header{
     /* display: block; */
     /* position: relative; */
 }
-#img-logo{
+
+#img-logo {
     width: 25%;
     height: 80%;
     /* position: relative; */
     /* flex: initial; */
 }
 
-#text-logo{
+#text-logo {
     /* /* width: 100%; */
     height: auto;
     /* margin-left: 30%; */
@@ -45,37 +50,38 @@ header{
     padding-top: 4%;
     font-size: 1.2rem;
     font-weight: lighter;
-       
+
 }
 
-        /*********** Le menu **********/
+/*********** Le menu **********/
 
-nav{
-    /* width: 100%;
-    height: auto; */
+nav {
+    /*je centre les liens du menu verticalement */
+    height: 5rem;
+    line-height: 5rem;
+
     /* position: relative; */
-    display: flex;
+    /* display: flex; */
     background-color: black;
-    margin-bottom: 10px;
-    padding: 1%;
 }
 
 /* le inline-block permet d'espacer les boîtes*/
-nav li{
+nav li {
     display: inline-block;
     list-style: none;
 }
 
 /* Les liens du menu et du pied de page auront la même apparence */
-a{
+a {
     /* text-decoration: none; */
     width: auto;
     color: white;
-    padding-top: 10px;
-    
+    /* j'espace les éléments de la liste */
+    padding: 1rem;
+
 }
 
-a:hover{
+a:hover {
     color: rgb(25, 153, 212);
 }
 
@@ -89,85 +95,86 @@ a:hover{
     color: rgb(25, 153, 212);
 } */
 
-        /****** image promo **********/
+/****** image promo **********/
 
 
-#img-promo{
+#img-promo {
     width: 100%;
     height: auto;
 }
 
-        /******** Le footer *************/
+/******** Le footer *************/
 
-footer{
+footer {
     width: 100%;
-    height: auto;
+    height: 5rem;
+    line-height: 5rem;
     /* display: flex; */
     background-color: black;
     position: absolute;
     /* margin-top: 0.6rem; */
     /* bottom: 0; */
-    padding: 2%;
+    /* padding: 2%; */
 }
 
-.liens{
+.liens {
     position: relative;
     /* display: inline-block; */
     /* list-style: none; */
     bottom: 0;
 }
 
-.liens a{
-        justify-items: space-between;
+.liens a {
+    justify-items: space-between;
 
 }
 
-        /****** PAGE ACCUEIL ********/
+/****** PAGE ACCUEIL ********/
 
 /* Ici je vais rendre flexible les éléments contenu dans la balise section
 avec le modèle de grilles pour pouvoir les placer comme demandé */
-section{
+section {
     display: flex;
     margin-top: 0.6rem;
     /* position: relative; */
     padding-bottom: 0.6rem;
 }
-    
-article h1{
+
+article h1 {
     /* margin: auto; */
     font: 1.8rem "Ubuntu Light";
 }
 
-.article{
+.article {
     border-top: 0.06rem solid;
 }
 
-.article h4{
+.article h4 {
     font: 1.2rem "Ubuntu Light";
 }
 
-.article p{
+.article p {
     font-family: Lucida Sans Regular;
     line-height: 1.2rem;
 }
 
-aside{
+aside {
     width: 50%;
     background-color: grey;
 }
 
 
-        /*********** PAGE TABLEAU ********** */
+/*********** PAGE TABLEAU ********** */
 
 
-.tableau{
+.tableau {
     overflow-x: auto;
     height: 100%;
     padding-bottom: 2rem;
     position: relative;
 }
 
-table{
+table {
     border-collapse: separate;
     width: 80%;
     /* height: 100%; */
@@ -184,69 +191,72 @@ table{
     /* padding-bottom: ; */
 }
 
-caption{
+caption {
     border-bottom: 0.06rem solid;
     text-align: left;
     font-weight: bold;
     font-size: 1.8rem;
 }
 
-tbody, thead{
+tbody,
+thead {
     margin: auto;
     /* border-collapse: collapse;
     border-spacing: 0rem;    */
 }
 
-th, td{
+th,
+td {
     font-family: 'Lucida Sans Sherif';
     text-align: center;
     /* font-weight: 100; */
 }
 
-td img{
+td img {
     width: 50%;
 }
 
-        /************* PAGE CONTACT ********** */
+/************* PAGE CONTACT ********** */
 
-.container{
+.container {
     width: 100%;
     /* margin: auto; */
     padding-bottom: 5%;
-    border-radius: 5%; 
+    border-radius: 5%;
 }
 
-#formulaire{
+#formulaire {
     /* j'utilise une valeur de type inside pour organiser le contenu du formulaire */
     display: table;
 }
 
-.champ{
+.champ {
     margin-bottom: 2%;
 }
 
-input{
+input {
     /* border: none; */
     border-radius: 5%;
     cursor: pointer;
     margin-left: 2%;
 }
 
-        /*********** responsive **************/
-    /* Je vais utiliser la valeur screen qui correspond aux écrans */
-    /*pour tous les écrans de taille inférieur à 768px*/
+/*********** responsive **************/
+/* Je vais utiliser la valeur screen qui correspond aux écrans */
+/*pour tous les écrans de taille inférieur à 768px*/
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     /* header{
         width: 80%; 
         display: flex;
         display: inline-block;
     } */
-    
-    #img-logo{
+
+    #img-logo {
         width: 50%;
     }
-    #text-logo{
+
+    #text-logo {
         /* position: absolute; */
         /* flex: none; */
         font-size: 80%;
@@ -255,42 +265,48 @@ input{
         margin: 0;
     }
 
-    nav{
+    nav {
         padding: 0;
     }
 
 
-    
+
     /*************** PAGE ACCUEIL ***************/
 
-    article h1{
+    article h1 {
         margin: auto;
     }
-    .article{
+
+    .article {
         padding: 2%;
         font-size: large;
     }
-    aside{
+
+    aside {
         display: none;
     }
+
     /***********PAGE TABLEAU ***********/
 
-    table{
+    table {
         table-layout: auto;
     }
-    table{
+
+    table {
         /* display: block; */
         height: 80%;
         /* position: relative; */
-    }  */
-    .tableau{
+    }
+
+    */ .tableau {
         /* margin: 3rem; */
         /* min-height: 100%; */
         /* height: 100%; */
         padding-bottom: 0;
 
     }
-    tbody{
+
+    tbody {
         line-height: 0;
 
     }
@@ -300,21 +316,22 @@ input{
     /* .container{
         height: auto;
     } */
-    #formulaire{
+    #formulaire {
         padding: 2%;
     }
 }
 
 @media screen and (max-width: 576px) {
-    nav li{
+    nav li {
         display: flex;
         flex-flow: column wrap;
         font-size: small;
     }
+
     /* table{
         /* display: block; */
-        /* height: 80%; */
-        /* position: relative; */
+    /* height: 80%; */
+    /* position: relative; */
     /* } 
     .tableau{
         height: 100%;
@@ -325,5 +342,4 @@ input{
         line-height: 0;
 
     } */
-} 
-
+}
