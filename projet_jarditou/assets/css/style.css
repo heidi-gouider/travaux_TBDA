@@ -24,11 +24,8 @@ body {
 header {
     width: 100%;
     height: auto;
-    /* display: inline-block; */
     display: flex;
     margin-top: 2%;
-    /* display: block; */
-    /* position: relative; */
 }
 
 #img-logo {
@@ -131,7 +128,7 @@ section {
     padding-bottom: 0.6rem;
 }
 
-article h1 {
+article h2 {
     /* margin: auto; */
     font: 1.8rem "Ubuntu Light";
 }
