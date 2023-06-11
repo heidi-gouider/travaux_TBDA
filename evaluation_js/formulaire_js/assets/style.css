@@ -160,14 +160,26 @@ input {
 
 }
 
+/* icone validation champ obligatoire */
+/* .check.icon {
+    color: green;
+    position: absolute;
+    margin-left: 3px;
+    margin-top: 4px;
+    width: 14px;
+    height: 8px;
+    border-bottom: solid 1px currentColor;
+    border-left: solid 1px currentColor;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+} */
+
 .bouton {
     margin-top: 20px;
     /* margin-bottom: 20px; */
 }
 
-/* # male {
 
-} */
 
 /***********responsive**********/
 
